@@ -21,7 +21,7 @@ import { UserModule } from './modules/user/user.module';
     CoreModule,
     PrimengModule,
     UserModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
