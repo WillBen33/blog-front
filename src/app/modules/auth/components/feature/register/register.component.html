@@ -1,24 +1,32 @@
 <form [formGroup]="registerForm" (ngSubmit)="register()">
 
-    <span class="p-float-label">
-        <input type="text" pInputText formControlName="text" />
-        <label htmlFor="username">Username</label>
-    </span>
+    <div class="p-5 m-5">
+        <div class="p-float-label">
+            <input type="text" pInputText formControlName="text" />
+            <label htmlFor="username">Username</label>
+        </div>
+    </div>
 
-    <span class="p-float-label">
-        <input type="email" pInputText formControlName="email" />
-        <label htmlFor="email">e-mail</label>
-    </span>
+    <div class="p-5 m-5">
+        <div class="p-float-label">
+            <input type="email" pInputText formControlName="email" />
+            <label htmlFor="email">e-mail</label>
+        </div>
+    </div>
 
-    <span class="p-float-label">
-        <p-password type="password" formControlName="password" [toggleMask]="true" />
-        <label htmlFor="password">Password</label>
-    </span>
+    <div class="p-5 m-5">
+        <div class="p-float-label">
+            <p-password formControlName="password" [feedback]="false" [toggleMask]="true" />
+            <label htmlFor="password">Password</label>
+        </div>
+    </div>
 
-    <span class="p-float-label">
-        <p-password type="password" formControlName="passwordVerification" [toggleMask]="true" />
-        <label htmlFor="passwordVerification">Password verification</label>
-    </span>
+    <div class="p-5 m-5">
+        <div class="p-float-label">
+            <p-password formControlName="passwordVerification" [toggleMask]="true" />
+            <label htmlFor="passwordVerification">Password verification</label>
+        </div>
+    </div>
 
     <button type="submit" [disabled]="!registerForm.valid">Register</button>
 
