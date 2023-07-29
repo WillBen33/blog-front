@@ -1,33 +1,33 @@
-<form [formGroup]="registerForm" (ngSubmit)="register()">
+<form [formGroup]="registerForm" (ngSubmit)="register()" class="flex flex-col m-auto">
 
-    <div class="p-5 m-5">
+    <div class="p-5 m-auto w-1/3">
         <div class="p-float-label">
-            <input type="text" pInputText formControlName="text" />
-            <label htmlFor="username">Username</label>
+            <input type="text" pInputText formControlName="text" class="w-full"/>
+            <label htmlFor="username">Pseudo</label>
         </div>
     </div>
 
-    <div class="p-5 m-5">
+    <div class="p-5 m-auto w-1/3">
         <div class="p-float-label">
-            <input type="email" pInputText formControlName="email" />
+            <input type="email" pInputText formControlName="email" class="w-full"/>
             <label htmlFor="email">e-mail</label>
         </div>
     </div>
 
-    <div class="p-5 m-5">
+    <div class="p-5 m-auto w-1/3">
         <div class="p-float-label">
-            <p-password formControlName="password" [feedback]="false" [toggleMask]="true" />
-            <label htmlFor="password">Password</label>
+            <p-password formControlName="password" [toggleMask]="true" [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}"/>
+            <label htmlFor="password">Mot de passe</label>
         </div>
     </div>
 
-    <div class="p-5 m-5">
+    <div class="p-5 m-auto w-1/3">
         <div class="p-float-label">
-            <p-password formControlName="passwordVerification" [toggleMask]="true" />
-            <label htmlFor="passwordVerification">Password verification</label>
+            <p-password formControlName="passwordVerification" [toggleMask]="true" [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}"/>
+            <label htmlFor="passwordVerification">Vérif. de mot de passe</label>
         </div>
     </div>
 
-    <button type="submit" [disabled]="!registerForm.valid">Register</button>
+    <p-button label="S'inscrire" id="register" class="m-auto cursor-pointer" styleClass="p-button-raised p-button-text" type="submit" [disabled]="!registerForm.valid"></p-button>
 
 </form>
