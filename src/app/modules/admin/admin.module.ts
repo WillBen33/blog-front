@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CreateArticleComponent } from './components/feature/create-article/create-article.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CreateArticleComponent
+  ],
   imports: [
     CommonModule
   ]
