@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
+import { EditorModule } from 'primeng/editor';
 
 @NgModule({
   declarations: [],
@@ -11,12 +12,14 @@ import { ButtonModule } from 'primeng/button';
     CommonModule,
     InputTextModule,
     PasswordModule,
-    ButtonModule
+    ButtonModule,
+    EditorModule
   ],
   exports: [
     InputTextModule,
     PasswordModule,
-    ButtonModule
+    ButtonModule,
+    EditorModule
   ]
 })
 export class PrimengModule { }
